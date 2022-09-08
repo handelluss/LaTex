@@ -1,0 +1,176 @@
+\documentclass[a4paper, 14pt]{article}
+\usepackage{import}
+\import{C:/LaTex}{pream.tex}
+
+\title{Алгебра I.}
+\author{Буглеев Антон}
+\date{}
+
+\begin{document}
+    \maketitle
+    \newpage
+
+    \section{Некоторые бинарные операции}
+    \subsection{Операции над векторами}
+    Сложение и умножение векторов: 
+    \[(x_1, ..., x_n) + (y_1, ..., y_n) = (x_1 + y_1, ..., x_n + y_n)\]
+    \[(x_1, ..., x_n)(y_1, ..., y_n) = (x_1y_1, ..., x_ny_n)\]
+
+    Комплексное умножение:
+    \[(a,b)(c,d) = (ac - bd, ad+bc)\]
+
+    Векторное умножение в $\mathbb{R}^3$:    
+    \[ (x_1,x_2,x_3) \times (y_1,y_2,y_3) = (x_2y_3 - x_3y_2, -x_1y_3 + x_3y_1, x_1y_2 - x_2y_2)\]
+    
+
+    \subsection{Операции над матрицами}
+    Сложение матриц:
+    \[
+    \begin{pmatrix}
+        a & b \\
+        c & d
+    \end{pmatrix}
+    +
+    \begin{pmatrix}
+        e & b \\
+        g & h
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        a+c & b+f \\
+        c+g & d + h
+    \end{pmatrix}
+    \]
+
+    Умножение матриц:
+    \[
+        \begin{pmatrix}
+            a & b \\
+            c & d    
+        \end{pmatrix}
+        \cdot
+        \begin{pmatrix}
+            e & f \\
+            g & h
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            ae+bg && af+bh \\
+            ce+dg && cf+ch
+        \end{pmatrix}
+    \]
+    
+    \section{Структуры}
+    \subsection{Основные структуры}
+    $X \neq \emptyset \\
+    *: X \times X \rightarrow X \\
+    (x,y) \mapsto x * y$ \\
+
+    Аксиомы:
+    \begin{enumerate}
+        \item $\forall x,y,z \in X: x * (y * z) = (x * y) * z$ (Ассоциативность)
+        \item $\exists e \in X: e * x = x = x * e$ (нейтральный элемент)
+        \item $\forall x \in X, \exists x': x * x' = x' * x = e$ (обратный элемент)
+        \item $\forall x,y \in X: a * b = b * a$ (коммутативность)
+    \end{enumerate}
+    
+    \begin{definition}
+        {\bfПолугруппа (Semigroup)} - множество $X$ с операцией, удовлетворяющее аксиоме 1
+    \end{definition}
+    Примеры: $(\mathbb{N}, +)$
+    \begin{definition}
+        {\bfМоноид (Monoid)} - множество $X$ c операцией *, удовлетворяющее аксиомам 1-2
+    \end{definition}
+    Примеры: $(\mathbb{N}_0, +)$, $(\mathbb{N}, *)$, $(X, \cup)$
+    
+    \begin{definition}
+        {\bfГруппа (Group)} - множество $X$ c операцией *, удовлетворяющее аксиомам 1-3
+    \end{definition}
+
+    \begin{definition}
+        {\bfАбелева (коммутативная) группа (Abelian group)} - множество $X$ c операцией *, удовлетворяющее аксиомам 1-4
+    \end{definition}
+
+    \subsection{Некоторые полезные леммы и определения}
+
+    \begin{definition}
+        Элемент $z \in X$ называется {\bfрегулярным}, если $\forall x, y \in X:$
+        \[
+        \begin{cases}
+            x*z=y*z \RA x=y \text{ (Регулярный справа)}\\
+            z*x=z*y \RA x=y \text{ (Регулярный слева)}
+        \end{cases}
+        \]
+    \end{definition}
+
+    \begin{definition}
+        Элемент $z \in X$ называется {\bfобратимым}, если $\exists z' \in X:$
+        \[
+            \begin{cases}
+                z * z' = e \text{ (Обратимый слева)} \\
+                z' * z = e \text{ (Обратимый справа)}
+            \end{cases}  
+        \]
+    \end{definition}
+
+    \begin{lemma}
+        Элемент $z \in X$ обратим слева/справа $\RA$ $z$ регулярен слева/справа
+    \end{lemma}
+    \begin{proof}[Proof]
+        \dots
+    \end{proof}
+
+    \begin{lemma}
+        В группе $G$ есть левое и правое деление: 
+        \[\forall h,g \in G \ \existu x,y \in G, (hx = g) \land (yh = g) \RA (x = h^{-1}g) \land (y=gh^{-1})\]
+    \end{lemma}
+    \begin{proof}
+        Докажем, что $hx=g \RA x=h^{-1}g$
+        \begin{align*}
+            hx &= g \ | \text{ домножим на $h^{-1}$}\\
+            h^{-1}(hx) &= h^{-1}g \\
+            (h^{-1}h)x &= h^{-1}g \\
+            ex &= h^{-1}g \\
+            x &= h^{-1}g
+        \end{align*}
+        Аналогичное доказательство утверждения $yh=g \RA y=gh^{-1}$
+    \end{proof}
+    
+    \begin{definition}
+        $H \subset G$ называется {\bfПодгруппой в $G$}, если 
+        \[\forall x,y \in H, \ xy^{-1} \in H \LRA 
+        \begin{cases}
+            xy \in H \\
+            y^{-1} \in H
+        \end{cases}\]
+    \end{definition}
+    Примеры: 
+    \begin{enumerate}
+        \item $\R_{>0} < \R^{*}$ значит, что $\R_{>0}$ - подгруппа $\R^{*}$
+        \item $\Q_{>0} < \Q^{*}$ значит, что $\R_{>0}$ - подгруппа $\R^{*}$
+    \end{enumerate}
+
+
+    \begin{definition}
+        Операция {\bfвозведения в степень в моноиде.} Пусть $X$ - моноид с нейтральным $e$, $x \in X, \ n \in \N_0$. Тогда:
+        \[x^0 = e, \ x^n = 
+        \begin{cases}
+            \left(x^{\frac{n}{2}}\right)^2, \ 2 \mid n \text{ ($2$ - делитель $n$)}\\
+            x^{n-1} \cdot x, \ 2 \nmid n \text{ ($2$ -  не делитель $n$)}
+        \end{cases}\]
+    \end{definition}
+    
+    \begin{definition}
+        Операция {\bfвозведения в степень в группе} определяется аналогично, только показатель $n \in \Z$
+    \end{definition}
+    
+    \begin{definition}
+        Группа $G$ называется {\bfконечной}, если её порядок $\abs{G}$ конечен
+    \end{definition}
+    
+    \subsection{Примеры групп}
+    \begin{definition}
+        {\bfСимметрическая группа} множества $X$: \[S_X = \text{биекция }X \rightarrow X \]
+    \end{definition}
+    
+\end{document}

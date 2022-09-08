@@ -1,0 +1,110 @@
+\documentclass[a4paper, 14pt]{article}
+\usepackage{import}
+\import{C:/LaTex}{pream.tex}
+
+\title{Основы теории множеств}
+\author{Буглеев Антон}
+\date{}
+\begin{document}
+    \maketitle
+    \newpage
+
+    \section{Мощность. Характеристическая функция}
+
+    \begin{definition}
+        {\bfМощностью} $\abs{A}$ называется число элементов в $A$.
+    \end{definition}
+
+    \begin{definition}
+        Фиксируем произвольное множество U, элементами которого являются множества
+        $A_1, ..., A_n$. \\
+        {\bfХарактеристической функцией (индикатором)} множества $X \subset U$ называют
+        функцию $\chi_X(u)$ = 
+        $\begin{cases} 
+            1, u \in X \\
+            0, u \notin X
+        \end{cases}$
+    \end{definition}
+
+    Основные свойства, если $A, B \subset U$:
+    \begin{enumerate}
+        \item $\chi_{A \cap B} = \chi_A \cdot \chi_B$
+        \item $\chi_{A\cup B} = \chi_A + \chi_B - \chi_{A \cap B}$
+        \item $\chi_{A\triangle B} = \chi_A + \chi_B - 2\chi_{A \cap B}$
+        \item $\chi_{A^c} = \chi_A$
+    \end{enumerate}
+
+    \begin{theorem} $\abs{A_1 \cup ... \cup A_n}$ равно
+        \[
+        \sum_{i} \abs{A_i} - 
+        \sum_{i<j} \abs{A_i \cap A_j} + 
+        \sum_{i<j<k} \abs{A_i \cap A_j \cap A_k} - ...
+        \]
+    \end{theorem}
+    \begin{proof}[Proof]
+        \[ \chi_{A_1 \cup ... \cup A_n} = 1 - (1 - \chi_{A_1}) \cdot ... \cdot (1 - \chi_{A_n}) \]
+        Раскрыв скобки получаем
+
+        \[
+            \sum_{i} \chi_{A_i} -
+            \sum_{i < j} \chi_{A_i}\chi_{A_j} +
+            \sum_{i < j < k} \chi_{A_i}\chi_{A_j}\chi_{A_k}  - \dots  
+        \]
+        \[ 
+        \sum_{i} \abs{A_i} -
+        \sum_{i<j}  \abs{A_i \cap A_j} +
+        \sum_{i<j<k} \abs{A_i \cap A_j \cap A_K} - \dots
+        \] что и требовалось.
+    \end{proof}
+
+    \begin{theorem}
+        $  \abs{A_1 \triangle ... \triangle A_n} $ равно
+        \[
+        \sum_i  \abs{A_i} -
+        2\sum_{i<j} \abs{A_iA_j} +
+        4\sum_{i<j<k} \abs{A_iA_jA_k} - \dots
+        \]
+    \end{theorem}
+    
+    \begin{definition}
+        Множества называются {\bfРавномощными}, если между ними можно
+        установить взаимно-однозначное соответствие.
+    \end{definition}
+
+    \section{Отношения}
+    \begin{definition}
+        {\bf Отношением} называется любое множество 
+        $R \subset A \times B$, где $A$ и $B$ - какие-то множества
+    \end{definition}
+    \begin{definition}
+        {\bf Бинарное отношение} - отношение вида $R \subset X \times X$
+    \end{definition}
+
+    Свойства отношений:
+    \begin{enumerate}
+        \item $\forall x \in X: xRx$ (рефлексивность)
+        \item $\forall x,y \in X: xRy \RA  yRx$ (симметричность)
+        \item $\forall x,y,z \in X: xRy \land yRz \RA xRz$ (транзитивность)
+        \item $\forall x,y \in X: xRy \land yRx \RA a = b$ (антисимметричность)
+        \item $\forall x,y \in X: xRy \lor yRx$ (связность)
+    \end{enumerate}
+
+    \begin{definition}
+        {\bfОтношение эквивалентности} - всякое симметричное, рефлексивное и транзитивное отношение
+    \end{definition}
+    Пример: $X$ - множество прямых в плоскости, тогда всякие прямые $a, b \in X$
+    находятся в отношении эквивалентности ($a \sim b$).
+
+    \begin{definition}
+        {\bfОтношение частичного порядка} - всякое рефлексивное, транзитивное и
+        антисимметричное отношение.
+    \end{definition}
+    Пример: пусть $X = \mathcal{P}(M)$ - множество всех подмножеств множества $M$.
+    Два произвольные множества $A, B \subset X$ находятся в отношении частичного
+    порядка ($A \preceq B$).
+
+    \begin{definition}
+        {\bfОтношение линейного порядка} - всякое связное отношение частичного порядка.
+    \end{definition}
+    
+\end{document}
