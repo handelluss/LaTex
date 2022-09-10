@@ -8,7 +8,377 @@
 
 \begin{document}
     \maketitle
-    \newpage
     
-    ПУСТОТА
+    \section{Действительные числа}
+    \subsection{Аксиоматика действительных чисел}
+    \subsubsection*{Аксиомы сложения}
+
+    Операция сложения: $+: \R \times \R \leftarrow \R$
+
+    \begin{enumerate}
+        \item $\exists 0 \in R \ \forall x \in R: x + 0 = 0 + x = x$
+        \item $\forall x \in R \ \exists (-x) \in R: x + (-x) = (-x) + x = 0$
+        \item $\forall x, y, z \in R: x + (y + z) = (x + y) + z$
+        \item $\forall x, y \in R: x + y = y + x$
+    \end{enumerate}
+
+    \subsubsection*{Аксиомы умножения}
+    Операция умножения: $\cdot: \R \times \R \leftarrow \R$
+
+    \begin{enumerate}
+        \item $\exists 1 \in \R \backslash \{0\} \ \forall x \in R: x\cdot 1 = 1\cdot x = x$
+        \item $\forall x \in \R \backslash \{0\} \ \exists x^{-1} \in R: x \cdot x^{-1} = x^{-1} \cdot x = 1$
+        \item $\forall x,y,z \in \R: x \cdot (y \cdot z) = (x \cdot y) \cdot z$
+        \item $\forall x,y \in \R: x \cdot y = y \cdot x$
+    \end{enumerate}
+
+
+    \subsubsection*{Связывающие аксиомы и аксиома полноты}
+    Связь сложения и умножения: \[(x+y)z = xz + yz\]
+
+    Аксиомы порядка:
+    \begin{enumerate}
+        \item $\forall x \in \R: x \leq x$
+        \item $\forall x,y \in \R: (x \leq y) \land (y \leq x) \RA (x=y)$
+        \item $\forall x,y,z \in \R: (x \leq y) \land (y \leq z) \RA (x \leq z)$
+        \item $\forall x,y \in \R: (x \leq y) \lor (y \leq x)$
+    \end{enumerate}    
+
+    Связь сложения и порядка: \[\forall x,y,z \in \R: (x \leq y) \RA (x + z \leq y + z)\]
+    Связь умножения и порядка: \[\forall x,y \in R: (0 \leq x) \land (0 \leq y) \RA (0 \leq x \cdot y)\]
+
+    Аксиома полноты (непрерывности): \\
+    {\itЕсли $X, Y$ - непустые подмножества $\R$, обладающие тем свойством, что если $\forall x \in X \ \forall y \in Y \ x \leq y$,
+    то $\exists c \in R \ \forall x \in X \ \forall y \in Y: x \leq c \leq y$}
+
+    \subsection{Некоторые следствия из аксимом}
+
+    \subsubsection*{Следствия аксиом сложения}
+
+    \begin{theorem}
+        В множестве $\R$ существует единственный $0$
+    \end{theorem}
+    \begin{proof}
+        Пусть существует $0_1$ и $0_2$, тогда:
+        \begin{equation*}
+            0_1 = 0_1 + 0_2 = 0_2 + 0_1 = 0_2    
+        \end{equation*}
+    \end{proof}
+
+    \begin{theorem}
+        $\forall x \in R \ \existu (-x)$ 
+    \end{theorem}
+    \begin{proof}
+        Пусть существуют $x_1$ и $x_2$, противоположные $x$:
+        \begin{equation*}
+            x_1 = x_1 + 0 = x_1 + (x + x_2) = (x_1 + x) + x_2 = 0 + x_2 = x_2
+        \end{equation*}
+    \end{proof}
+
+    \begin{theorem}
+        Уравнение $a + x = b$ в $\R$ имеет единственное решение $x = b + (-a)$
+    \end{theorem}
+    \begin{proof}
+        \begin{multline*}
+            a + x = b \LRA a + x + (-a) = b + (-a) \\ \LRA x + a + (-a) = b + (-a) \LRA x + 0 = b + (-a) \LRA x = b + (-a)
+        \end{multline*}
+    \end{proof}
+
+    \subsubsection*{Следствия аксиом умножения}
+    \begin{theorem}
+        В множестве $\R$ существует единственная $1$
+    \end{theorem}
+    \begin{proof}
+        Пусть существуют единицы $1_1$ и $1_2$, тогда:
+        \begin{equation*}
+            1_1 = 1_1 \cdot 1_2 = 1_2 \cdot 1_1 = 1_2
+        \end{equation*}
+    \end{proof}
+
+    \begin{theorem}
+        $\forall x \neq 0 \in R \ \existu x^{-1}$ 
+    \end{theorem}
+    \begin{proof}
+        Пусть существуют $x_1$ и $x_2$ обратные $x$, тогда:
+        \begin{equation*}
+            x_1 = x_1 \cdot 1 = x_1 \cdot (x \cdot x_2) = (x_1 \cdot x) \cdot x_2 = 1 \cdot x_2 = x_2
+        \end{equation*}
+    \end{proof}
+
+    \begin{theorem}
+        Уравнение $ax = b$ в $\R \backslash \{0\}$ имеет единственное решение $x = ba^{-1}$
+    \end{theorem}
+    \begin{proof}
+        \begin{equation*}
+            ax = b \LRA axa^{-1} = ba^{-1} \LRA xaa^{-1} = ba^{-1} \LRA x = ba^{-1}
+        \end{equation*}
+    \end{proof}
+
+    \subsubsection*{Следствия аксиомы связи сложения и умножения}
+
+    \begin{theorem}
+        $\forall x \in \R: x \cdot 0 = 0 \cdot x = 0$
+    \end{theorem}
+    \begin{proof}
+        \begin{multline*}
+            x \cdot 0 = x \cdot (0 + 0) = x \cdot 0 + x \cdot 0 \RA \\
+            x \cdot 0 = x \cdot 0 + 0 = x \cdot 0 + (x \cdot 0 + (-(x \cdot 0))) = x \cdot 0 + (-(x \cdot 0)) = 0
+        \end{multline*}
+    \end{proof}
+
+    \begin{theorem}
+        $(x \cdot y = 0) \RA (x = 0) \lor (y = 0)$
+    \end{theorem}
+    \begin{proof}
+        Решим уравнение относительно $x$, затем относительно $y$:
+        \begin{enumerate}
+            \item $x \cdot y = 0 \RA \ x = 0 \cdot y^{-1} \RA \ x = 0$
+            \item $x \cdot y = 0 \RA \ y = 0 \cdot x^{-1} \RA \ y = 0$
+        \end{enumerate}
+    \end{proof}
+
+    \begin{theorem}
+        $\forall x \in \R: -x = (-1) \cdot x$
+    \end{theorem}
+    \begin{proof}
+        \begin{multline*}
+            -x = (-1) \cdot x \RA \\ -x + x = (-1) \cdot x + x \RA  0 = ((-1) + 1) \cdot x \RA \\ 0 = 0 \cdot x \RA 0 = 0
+        \end{multline*}
+    \end{proof}
+
+    \begin{theorem}
+        $\forall x \in \R: (-1)(-x) = x$
+    \end{theorem}
+    \begin{proof}
+        Согласно предыдущей теореме \[x = (-1)(-x) \]
+    \end{proof}
+
+    \begin{theorem}
+        $\forall x \in \R: (-x)(-x) = x \cdot x$
+    \end{theorem}
+    \begin{proof}
+        \begin{equation*}
+            (-x)(-x) = (-1)x(-x) = x(-1)(-x) = x \cdot x
+        \end{equation*}
+    \end{proof}
+
+    \subsubsection*{Следствия аксиом порядка}
+
+    \begin{theorem}
+        $\forall x,y \in \R: (x < y) \lor (x = y) \lor (x > y)$
+    \end{theorem}
+    \begin{proof}
+        \begin{multline*}
+            (x \leq y) \lor (y \leq x) \RA (x < y) \lor (x = y) \lor (y < x) \lor (y = x) \\ \RA (x=y) \lor (x<y) \lor (x>y)
+        \end{multline*}    
+    \end{proof}
+
+    \begin{theorem} $\forall x,y,z \in \R:
+        \begin{cases}
+            (x < y) \land (y \leq z) \RA (x < z) \\
+            (x \leq y) \land (y < z) \RA (x < z)    
+        \end{cases}$
+    \end{theorem}
+    \begin{proof}
+        Докажем первое утверждение:
+        \begin{align*}
+            &(x \leq y) \land (y < z) \RA  \\
+            &(x \leq y) \land (y \leq z) \land (y \neq z) \RA \\
+            &(x \leq z)
+        \end{align*}
+        Докажем теперь, что $x \neq z$. Пойдём от противного:
+        \begin{align*}
+            &(x \leq y) \land (y < z) \RA \\
+            &(z \leq y) \land (y < z) \RA \\
+            &(z \leq y) \land (y \leq z) \land (y \neq z) \RA \\
+            &(z = y) \land (y \neq z)
+        \end{align*}Получили противоречие, что и требовалось.
+    \end{proof}
+
+    \subsubsection*{Следствия аксиом связи порядка со сложением и умножением}
+
+    \begin{theorem}
+        $\forall x,y,z,w \in \R$:
+        \begin{align*}
+            &(x<y) \RA (x + z) < (y + z) \\
+            &(0<x) \RA (-x < 0) \\
+            &(x \leq y) \land (z \leq w) \RA (x + z \leq y + w) \\
+            &(x \leq y) \land (z \leq w) \RA (x + z < y + w) 
+        \end{align*}
+    \end{theorem}
+    \begin{proof}
+        Докажем третье утверждение:
+        \begin{align*}
+            &(x \leq y) \land (z \leq w) \RA \\
+            &(x \leq y) \land (y \leq y + w + (-z)) \RA \\
+            &(x \leq y + w + (-z)) \RA \\
+            &(x + z \leq y + w)
+        \end{align*}
+    \end{proof}
+
+    \begin{theorem}
+        $\forall x,y,z \in \R$:
+        \begin{align*}
+            &(0 < x) \land (0 < y) \RA (0 < xy) \\
+            &(x < 0) \land (y < 0) \RA (0 < xy) \\
+            &(x < 0) \land (0 < y) \RA (xy < 0) \\
+            &(x < y) \land (0 < z) \RA (xz < yz) \\
+            &(x < y) \land (z < 0) \RA (yz < xz)
+        \end{align*}
+    \end{theorem}
+
+    \begin{theorem}
+        $0 < 1$
+    \end{theorem}
+    \begin{proof}
+        $1 \in \R\backslash\{0\}$, т.е. $0 \neq 1$. \\
+        Пусть $1 < 0$, тогда по предыдущей теореме:
+        \[(1 < 0) \land (1 < 0) \RA (0 < 1 \cdot 1) \RA 0 < 1\]
+        Т.е., одновременно $(1 < 0)$ и $(0 > 1)$ - противоречие.
+    \end{proof}
+
+    \begin{theorem}
+        $\forall x,y \in \R$:
+        \begin{align*}
+            &(0 < x) \RA (0 < x^{-1}) \\
+            &(0 < x) \land (x < y) \RA (0 < y^{-1}) \land (y^{-1} < x^{-1})
+        \end{align*}
+    \end{theorem}
+
+    \subsection{Аксиома полноты и верхняя (нижняя) грань числового множества}
+
+    \begin{definition}
+        Множество $X \subset \R$ {\itограничено сверхну (снизу)}, если
+        $\exists c \in \R \ \forall x \in X: x \leq c \ (c \leq x)$
+    \end{definition}
+    Число $c$ нахывают верхней (нижней) границей $X$ или мажорантой (минорантой)
+    \begin{definition}
+        Множество, ограниченное сверху и снизу, называется 
+        {\itограниченным}
+    \end{definition}
+    \begin{definition}
+        Элемент $a \in X$ называется {\itнаибольшим (наименьшим)} 
+        элементом множества $X \subset \R$, если $\forall x \in \R: x \leq a \ (a \leq x)$
+
+        \begin{align*}
+            &(a = \max X) := a \in X \ \forall x \in X: x \leq a \\
+            &(a = \min X) := a \in X \ \forall x \in X: a \leq x
+        \end{align*}
+    \end{definition}
+
+    \begin{lemma}
+        Если в числовом множестве есть максимальный (минимальный) элемент, то он только один.
+    \end{lemma}
+    \begin{definition}
+        {\itВерхней гранью} множества $X$ называется 
+        \[(s = \sup X) := \forall x \in X ((x \leq s) \land (\forall s' < s \ \exists x' \in X: s' < x'))\]
+    \end{definition}
+    \begin{definition}
+        {\itНижней гранью} называется
+        \[(i = \inf X) := \forall x \in X((i \leq x) \land (\forall i' > i \ \exists x' \in X: x < i'))\]
+    \end{definition}
+
+    \begin{lemma}
+        Всякое непустое ограниченное сверху (снизу) множество $X \subset \R$ имеет единственную верхнюю (нижнюю) грань.
+    \end{lemma}
+    \begin{proof}
+        Пусть $x_1 = \sup X, x_2 = \sup X$. Из определения верхней грани следует, что
+        $\begin{cases}
+            \forall x \in X : x \leq x_1 \\
+            \forall x \in X : x \leq x_2
+        \end{cases}$ $\RA$
+        $\begin{cases}
+            x_1 \leq x_2 \\
+            x_2 \leq x_1
+        \end{cases}$ $\RA x_1 = x_2$  
+    \end{proof}
+
+
+    \subsection{Классы действительных чисел}
+    \subsubsection*{Натуральные числа и индукция}
+    \begin{definition}
+        Множество $X \subset \R$ называется {\itиндуктивным}, если вместе
+        с каждым числом $x \in X$ ему принадлежит число $x+1$.
+    \end{definition}
+    Пример: пересечение $X = \bigcap_{\alpha \in A} X_\alpha$ любого
+    семейства индуктивных множеств $X_\alpha$, если оно непусто. Покажем:
+    \begin{align*}
+        &x \in X = \bigcap_{\alpha \in A} X_\alpha \RA\\
+        &\forall \alpha \in A : x \in X_\alpha \RA \\
+        &\forall \alpha \in A : (x+1) \in X_\alpha \RA \\
+        &(x+1) \in \bigcap_{\alpha \in A} X_\alpha = X
+    \end{align*}
+
+    \begin{definition}
+        Множеством {\itнатуральных чисел} $\N$ называется пересечение всех
+        индуктивных множеств, содержащих число $1$.
+    \end{definition} 
+
+    \begin{lemma} Принцип математической индукции.
+        \[(E \subset \N) \land (1 \in E) \land (\forall x \in E : x \in E \RA x+1 \in E) \RA E = \N\]
+    \end{lemma}
+
+    \begin{theorem}
+        $\forall x,y \in \N: (x + y) \in \N \land (x \cdot y) \in \N$
+    \end{theorem}
+    \begin{proof}
+        Докажем сложение. Пусть $E$ множество тех $y \in \N$, для которых
+        $(x + y) \in \N$. \\
+        $1 \in E$, так как $(m \in \N) \RA (m + 1 \in N)$ по определению индуктивного
+        множества. \\
+        Если $y \in E \LRA (x+y) \in N$, то $y + 1 \in E$, так как
+        $x + (y + 1) = ((x + y) + 1) \in \N$ по определению индуктивного
+        множества. \\
+        Опираясь на предыдущую лемму доказано.
+    \end{proof}
+
+    \begin{theorem}
+        $\forall n \in \N : n \neq 1 \RA (n-1) \in \N$
+    \end{theorem}
+    \begin{proof}
+        Пусть $E = \{(n-1) \in \N \ \vert \ n \in \N \ \land \ n \neq 1\}$. Докажем, что $E = \N$ \\
+        \[(1 \in \N) \RA (2 := (1 + 1) \in \N) \RA (1 = (2 - 1) \in E)\]
+        Пусть $(n-1) \in E$. Тогда:
+        \[(n-1)+1 = (n+1)-1\]
+        $(n+1) \in \N \ \land \ (n+1) \neq 1 \RA ((n+1) - 1) \in E$
+        \\ По индукции заключаем, что $E=\N$.
+    \end{proof}
+
+    \begin{theorem}
+        $\forall x, n \in \N : \lnot(n < x < n + 1)$
+    \end{theorem}
+
+    \subsubsection*{Целые числа}
+    \begin{definition}
+        {\itЦелые числа} есть множество $\Z = \N \cup \{0\} \cup \{-n \ \vert \ n \in \N\}$
+    \end{definition}
+
+    \begin{definition}
+        Число $p \in \N, \neq 1$ называется {\itпростым}, если 
+        \[\forall x \in N, \neq p, \neq 1: x \nmid p\]
+    \end{definition}
+
+    \begin{theorem}
+        $\forall n \in \N \ \existu n = p_1 \cdot ... \cdot p_k$, где $p_1, \dots, p_k$ - простые числа
+    \end{theorem}
+
+    \subsubsection*{Рациональные числа}
+    \begin{definition}
+        Числа вида $m \cdot n^{-1}$, где $m \in \Z, n \in \N$ называются {\itрациональными} и обознаются как множество $\Q$.
+    \end{definition}
+    \begin{theorem}
+        $\forall m, k \in \Z \ \forall n \in \N: \frac{mk}{nk}=\frac{m}{n}$
+    \end{theorem}
+    \begin{proof}
+        \[\frac{mk}{nk} = (mk)(nk)^{-1} = (mk)(k^{-1} \cdot n^{-1}) = m \cdot n^{-1} = \frac{m}{n}\]
+    \end{proof}
+
+    \subsubsection*{Иррациональные числа}
+    \begin{definition}
+        {\itИррациональные числа} есть $\R \backslash \Q$
+    \end{definition}
+    \begin{theorem}
+        $\exists s \in \R : s^2 = 2 \land s \in \R$
+    \end{theorem}
+    
 \end{document}
