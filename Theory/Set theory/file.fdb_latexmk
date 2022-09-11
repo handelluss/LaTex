@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1662643161 "c:/LaTex/Конспекты/Основы теории множеств/file.tex" "file.pdf" "file" 1662643163
+["pdflatex"] 1662889137 "c:/LaTex/Theory/Set theory/file.tex" "file.pdf" "file" 1662889138
+  "c:/LaTex/Theory/Set theory/file.tex" 1662889136 4888 19bc848e90229f28705bd944d41b4473 ""
   "c:/LaTex/pream.tex" 1662643160 903 29425b9eecd27db5bdf27ccf18516038 ""
-  "c:/LaTex/Конспекты/Основы теории множеств/file.tex" 1662617625 4762 50ba63773cf1dae9527abcfae3f96ece ""
   "c:/Users/handelluss/.texlive2022/texmf-var/fonts/tfm/lh/lh-t2a/labx1440.tfm" 1658839048 3304 6a543c07045572737981351171e0505e ""
   "c:/Users/handelluss/.texlive2022/texmf-var/fonts/tfm/lh/lh-t2a/labx2074.tfm" 1659326068 3316 0992aa03d0c75498a0b6fb905d9eaab6 ""
   "c:/Users/handelluss/.texlive2022/texmf-var/fonts/tfm/lh/lh-t2a/larm1440.tfm" 1658838922 3256 3daaa33cf35cf3f354983aa3214ecd7f ""
@@ -83,8 +83,8 @@
   "c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1658836104 361512 82dfaf0f77de909661d2b8160dee23c6 ""
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1658836131 1573550 4d631f5ee361d2520ab231dc46d5144a ""
   "c:/texlive/2022/texmf.cnf" 1658836093 713 e69b156964470283e0530f5060668171 ""
-  "file.aux" 1662643162 395 fa2f9738eb7d96b05ca6a6af5de659fc "pdflatex"
-  "file.tex" 1662617625 4762 50ba63773cf1dae9527abcfae3f96ece ""
+  "file.aux" 1662889138 395 fa2f9738eb7d96b05ca6a6af5de659fc "pdflatex"
+  "file.tex" 1662889136 4888 19bc848e90229f28705bd944d41b4473 ""
   (generated)
   "file.aux"
   "file.log"

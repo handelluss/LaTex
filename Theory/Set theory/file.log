@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.26)  8 SEP 2022 16:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.26)  11 SEP 2022 12:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/LaTex/РљРѕРЅСЃРїРµРєС‚С‹/РћСЃРЅРѕРІС‹ С‚РµРѕСЂРёРё РјРЅРѕР¶РµСЃС‚РІ/file.tex"
-(c:/LaTex/РљРѕРЅСЃРїРµРєС‚С‹/РћСЃРЅРѕРІС‹ С‚РµРѕСЂРёРё РјРЅРѕР¶РµСЃС‚РІ/file.tex
+**"c:/LaTex/Theory/Set theory/file.tex"
+(c:/LaTex/Theory/Set theory/file.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-07-15> (c:/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -490,23 +490,23 @@ File: l3backend-pdftex.def 2022-07-01 L3 backend support: PDF output (pdfTeX)
 ) (./file.aux)
 \openout1 = `file.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Info: Redefining \th on input line 8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Info: Redefining \th on input line 9.
  (c:/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
  (c:/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
@@ -541,46 +541,46 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 \Gin@req@height=\dimen176
 \Gin@req@width=\dimen177
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
  (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
  (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (23.23608pt too wide) in paragraph at lines 12--12
+Overfull \hbox (23.23608pt too wide) in paragraph at lines 13--13
 |[]\T2A/cmr/bx/n/20.74 Мощность. Характеристическая функция| 
  []
 
 
-Overfull \hbox (5.6241pt too wide) in paragraph at lines 19--27
+Overfull \hbox (5.6241pt too wide) in paragraph at lines 20--28
 \T2A/cmr/bx/n/14.4 Характеристической функцией (индикатором) \T2A/cmr/m/n/14.4 множества $\OML/cmm/m/it/14.4 X \OMS/cmsy/m/n/14.4 ^^Z
  []
 
 [2]
-Overfull \hbox (43.67055pt too wide) in paragraph at lines 93--94
+Overfull \hbox (43.67055pt too wide) in paragraph at lines 94--95
 \T2A/cmr/bx/n/14.4 Def. Отношение эквивалентности \T2A/cmr/m/n/14.4 - всякое симметричное, рефлексивное
  []
 
 
-Overfull \hbox (61.47188pt too wide) in paragraph at lines 99--101
+Overfull \hbox (61.47188pt too wide) in paragraph at lines 100--102
 \T2A/cmr/bx/n/14.4 Def. Отношение частичного порядка \T2A/cmr/m/n/14.4 - всякое рефлексивное, транзитивное
  []
 
 [3] (./file.aux) ) 
 Here is how much of TeX's memory you used:
  5946 strings out of 479416
- 93167 string characters out of 5879040
- 409091 words of memory out of 5000000
+ 93035 string characters out of 5879040
+ 409207 words of memory out of 5000000
  24085 multiletter control sequences out of 15000+600000
  480689 words of font info for 58 fonts, out of 8000000 for 9000
  452 hyphenation exceptions out of 8191
- 63i,14n,72p,343b,219s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 63i,14n,72p,299b,219s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm2488.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb>
-Output written on file.pdf (3 pages, 163295 bytes).
+Output written on file.pdf (3 pages, 176296 bytes).
 PDF statistics:
  85 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream

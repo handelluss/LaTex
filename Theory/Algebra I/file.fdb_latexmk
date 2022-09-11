@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1662644427 "c:/LaTex/Конспекты/Алгебра/file.tex" "file.pdf" "file" 1662644428
+["pdflatex"] 1662888956 "c:/LaTex/Theory/Algebra I/file.tex" "file.pdf" "file" 1662888958
+  "c:/LaTex/Theory/Algebra I/file.tex" 1662888956 6633 c6dc68fcb76845df6ffcddac440a1858 ""
   "c:/LaTex/pream.tex" 1662643160 903 29425b9eecd27db5bdf27ccf18516038 ""
-  "c:/LaTex/Конспекты/Алгебра/file.tex" 1662644426 6500 bac48d53868a40049189ebc90f0333e4 ""
   "c:/Users/handelluss/.texlive2022/texmf-var/fonts/tfm/lh/lh-t2a/labx1440.tfm" 1658839048 3304 6a543c07045572737981351171e0505e ""
   "c:/Users/handelluss/.texlive2022/texmf-var/fonts/tfm/lh/lh-t2a/labx1728.tfm" 1658839014 3312 d199be9bd555944e2403193d58a0256a ""
   "c:/Users/handelluss/.texlive2022/texmf-var/fonts/tfm/lh/lh-t2a/labx2074.tfm" 1659326068 3316 0992aa03d0c75498a0b6fb905d9eaab6 ""
@@ -90,8 +90,8 @@
   "c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1658836104 361512 82dfaf0f77de909661d2b8160dee23c6 ""
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1658836131 1573550 4d631f5ee361d2520ab231dc46d5144a ""
   "c:/texlive/2022/texmf.cnf" 1658836093 713 e69b156964470283e0530f5060668171 ""
-  "file.aux" 1662644428 1059 2da11262bd3da13d263ca879d6590943 "pdflatex"
-  "file.tex" 1662644426 6500 bac48d53868a40049189ebc90f0333e4 ""
+  "file.aux" 1662888957 1059 2da11262bd3da13d263ca879d6590943 "pdflatex"
+  "file.tex" 1662888956 6633 c6dc68fcb76845df6ffcddac440a1858 ""
   (generated)
   "file.aux"
   "file.log"
