@@ -1,0 +1,8 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Действительные числа}{3}{}%
+\contentsline {subsection}{\numberline {1.1}Аксиоматика действительных чисел}{3}{}%
+\contentsline {subsection}{\numberline {1.2}Некоторые следствия из аксимом}{4}{}%
+\contentsline {subsection}{\numberline {1.3}Верхняя (нижняя) грань числового множества}{8}{}%
+\contentsline {subsection}{\numberline {1.4}Классы действительных чисел}{9}{}%
+\contentsline {subsection}{\numberline {1.5}Аксиомы непрерывности или полноты}{12}{}%
+\contentsline {subsection}{\numberline {1.6}Грани}{14}{}%

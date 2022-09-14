@@ -103,14 +103,62 @@
     \begin{theorem}
         Множество булевых функций $F$ является полным тогда и только
         тогда, когда $F$ не содержится ни в одном из пяти классов
-        $T_0, T_1, S, M, L$
+        $T_0, T_1, S, M, L$. (Теорема Поста)
     \end{theorem}
     \begin{proof}
         \begin{enumerate}
             \item $\RA$ \\
-            \dots
+            Предположим, что $F$ содержится в одном из классов $\RA$ $[F]$
+            также содержится в одном из классов. Но все булевы функции не 
+            исчерпываются только одним классом. Получили противоречие.
             \item $\LA$ \\
-            \dots
+            Пусть $f_0, f_1, f_s, f_m, f_l \in F$ и $f_0 \notin T_0, 
+            f_1 \notin T_1, f_s \notin S, f_m \notin M, f_l \notin L$.
+
+            \begin{enumerate}
+                \item $f_0 \notin T_0 \RA f_0(0,0,\dots, 0) = 1$. \\
+                Если $f_0(1, 1, \dots, 1) = 1$, значит получена константа
+                $\phi_1(x) = f_0(x, \dots, x) = 1$ \\
+                Если $f_0(1, \dots, 1) = 0$, значит получено отрицание
+                $\overline{\phi(x)} = f_0(x, \dots, x) = \overline{x}$
+
+                \item $f_1 \notin T_1 \RA f_1(1, \dots, 1) = 0$. \\
+                Если $f_1(0, \dots, 0) = 1$, значит получено отрицание
+                $\overline{\phi(x)} = f_0(x, \dots, x) = \overline{x}$ \\
+                Если $f_1(0, \dots, 0) = 0$, значит получена константа
+                $\phi_0(x) = f_1(x, \dots, x) = 0$
+
+                \item $f_s \notin S \RA \exists (\sigma_1, \dots, \sigma_n) : f_s(\sigma_1, \dots, \sigma_n) = f_s(\overline{\sigma_1}, \dots, \overline{\sigma_n})$.  
+                Имея лишь отрицание из пунктов (a) и (b) мы можем получить константу с помощью
+                $f_s(x^{\sigma_1}, \dots, x^{\sigma_n})$, а с помощью отрицания другую константу.
+
+                \item $f_m \notin M \RA \exists (\sigma_1, dots, \sigma_n) : 
+                \begin{cases}
+                    f_s(\sigma_1, \dots, \sigma_k, 0, \sigma_{k+2}, \dots, \sigma_n) = 1 \\
+                    f_s(\sigma_1, \dots, \sigma_k, 1, \sigma_{k+2}, \dots, \sigma_n) = 0
+                \end{cases}$
+
+                Таким образом, $f_s(\sigma_1, \dots, \sigma_k, x, \sigma_{k+2}, \dots, \sigma_n) = \overline{x}$, получаем отрицание.
+
+                \item $f_l \notin L \RA$ у $f_l$ хотя бы одно из слагаемых содержит конъюнкцию.
+                Расмотрим некоторую конъюнкцию. Выберем из неё два множителя $x$ и $y$. Тогда, поскольку,
+                данная конъюнкция принимают единицу, $\exists$ набор $\alpha$, при котором остальные множители
+                конъюнкции существуют. Тогда функция принимает вид:
+                \begin{align*}
+                    &f_l(x, y, \alpha) = xyp(\alpha) \oplus xs(\alpha) \oplus yq(\alpha) \oplus r(\alpha) \\
+                    &f_l(x, y, \alpha) = xy \oplus xs(\alpha) \oplus yq(\alpha) \oplus r(\alpha) \\
+                    &f_l(x, y) = xy \oplus xa \oplus yb \oplus c; \ a, b, c \in \{0, 1\}
+                \end{align*}
+                Если $a = b = c = 0$ тогда конъюнкция получена. В противном случае:
+                \begin{align*}
+                    &f_l(x \oplus b, y \oplus a) = (x \oplus b)(y \oplus a) \oplus (x \oplus b)a \oplus (y \oplus a)b \oplus c \\
+                    &f_l = xy \oplus xa \oplus yb \oplus ab \oplus xa \oplus ab \oplus yb \oplus ab \oplus c \\
+                    &f_l = xy \oplus ab \oplus c
+                \end{align*}
+                При любом наборе $(a, b, c)$ мы получаем либо конъюнкцию, либо её отрицание, но с помощью
+                ещё одного отрицания получаем конъюнкцию. Что и требовалось
+            \end{enumerate}
+
         \end{enumerate}
     \end{proof}
 
@@ -205,4 +253,161 @@
             &\frac{n!}{1+o(1)} = \sqrt{2\pi n}\left(\frac{n}{e}\right)^n
         \end{align*}
     \end{theorem}
+
+    % BEGINNING
+    \subsection*{Язык Дика. Число Каталана}
+
+    \begin{definition}
+        {\itПравильная скобочная последовательность}. Определим по индукции:
+        \begin{enumerate}
+            \item пустая строка $\epsilon$ - ПСП
+            \item если $w$ - ПСП, то $(w)$ - ПСП
+            \item если $w, u$ - ПСП, то $wu$ - ПСП
+        \end{enumerate}
+    \end{definition}
+
+    \begin{definition}
+        {\it Языком Дика} называется множество всех ПСП:
+        $\epsilon, (), ()(), (()), (()()) \dots$
+    \end{definition}
+
+    \begin{definition}
+        {\it Числа Каталана} задаются количеством ПСП с $n$ парами скобок    
+    \end{definition}
+    Пример:
+    \begin{enumerate}
+        \item $D_0 = 1$ : $\epsilon$
+        \item $D_1 = 1$ : $()$
+        \item $D_2 = 2$ : $(()), ()$
+        \item \dots
+    \end{enumerate}
+    
+    \begin{theorem}
+        Рекурентная формула чисел Каталана:
+        \[D_0 = 1; D_n = \sum_{k=0}^{n-1}D_kD_{n-1-k}\]
+    \end{theorem}
+    \begin{proof}
+        Пусть $w$ - произвольная ПСП длины $2n$. Она начинается
+        с открывающей скобки. Найдём ей парную закрывающуюся и представим 
+        в виде: $w = (u)v$, где $u, w$ - ПСП.
+        
+        % ДОПИСАТЬ
+        Если длина u есть $2k$, то $u$ можно составить $D_k$ способами.
+        Тогда длина $v$ есть $2(n-k-1)$.   $v$ можно составить $D_{n-k-1}$ способами.
+        Применим правило произведения и получим, что способов составить $D_n = D_kD_{n-k-1}$
+    \end{proof}
+
+    Зададим числа Каталана через монотонные пути.
+    ПСП длины $2n$ поставим в соответствие путь в квадрате $[0, n] \times [0, n]$
+        из точки $(0, 0)$ в точку $(n, n)$.
+        
+        Открывающей скобки сопоставим горизонтальный отрезок длины $1$, а закрывающей -
+        вертикальный.
+
+        Если путь сопоставлен ПСП, то ни одна его точка не может лежать выше 
+        главной диагонали квадрата.
+    \begin{theorem}
+        ПСП $\LRA$ в $\forall преф. число$ ( $\geq $число)
+    \end{theorem}
+    % ДОКАЗАТЬ
+
+    \begin{theorem}
+        Аналитическая формула для чисел Каталана.
+        \[D_n = \dfrac{1}{n+1}C^n_{2n}\]
+    \end{theorem}
+    \begin{proof}
+        Сместим правильный путь на клетку вниз: теперь правильный
+        путь идёт из $(0, -1)$ в $(n, n-1)$ и не имеет общих точек
+        с прямой $y=x$.
+
+        Число правильный путей $=$ общее число путей $-$ число неправильных.
+
+        Общее число путей $= C^n_{2n}$
+
+        Рассмотрим неправильный путь и его первую точку на 
+        прямой $y=x$ - пусть это точка $A$. Отрезок до $A$ заменим
+        симметричным относительно $y=x$. Получили путь длины $2n$
+        из $(-1; 0)$ в $(n; n-1)$.
+        Следовательно, неправильных путей из $(0; -1)$ в $(n;n-1)$ 
+        столько же, сколько и путей из $(-1; 0)$ в $(n, n-1)$:
+        равно $C_2n^{n-1}$ 
+
+        \[D_n = C^n_{2n} - C^{n-1}_{2n} = \dfrac{1}{n+1}C_{2n}^n\]
+        %РАСПИСАТЬ
+    \end{proof}
+
+    \begin{theorem}
+        Асимптотика чисел Каталана.
+        \[D_n = (1 + o(1)) \cdot \dfrac{4^n}{n^{\frac{3}{2}}\sqrt{\pi}}\]
+    \end{theorem}
+    \begin{proof}
+        Применим формулу Стирлинга.
+        % ДОПИСАТЬ
+    \end{proof}
+
+    \section{Графы}
+
+    \subsection*{Много определений}
+    \begin{definition}
+        {\it Графом} называется пара $G = (V,E)$, где $V$ - конечное
+        множество вершин, а $E \subseteq V \times V$ - множество рёбер.
+    \end{definition}
+    
+    \begin{definition}
+        Граф можно задать {\it матрицей смежности} $A = (a_{ij})$ порядка $\abs{V}$:
+        \[\begin{cases}
+            1, (i,j) \in E \\ 0, (i, j) \notin E
+        \end{cases}\]    
+    \end{definition}
+    
+    \begin{definition}
+        Граф {\it неориентированный}, если $(u, v) \RA (v, u)$. Иначе
+        граф называется {\it ориентированным}.
+    \end{definition}
+
+    \begin{definition}
+        При {\itмультиграфе} допускаются кратные рёбра. Тогда в таблице смежности 
+        будут присутствовать $n \in \N$.
+    \end{definition}
+        \begin{definition}
+        Две вершины $u, v$ называются {\it смежными}, если $(u, v) \in E$.
+    \end{definition}
+
+    \begin{definition}
+        Вершина $v$ и ребро $e$ называются {\it инциндетными}, если $e = (v, u)$ для
+        некоторой вершины $u$.
+    \end{definition}
+
+    \begin{definition}
+        Ребро, концевые вершины которого совпадают, называется {\it петлёй}    
+    \end{definition}
+
+    \begin{definition}
+        {\itСтепень} deg($v$) вершины $v$ - число инциндетных ей ребёр (петля считается дважды)    
+    \end{definition}
+
+    \begin{lemma}
+        \item Во всяком графе сумма степеней всех вершин равна удвоенному числу рёбер
+    \end{lemma}
+    \begin{proof}
+        \dots    
+    \end{proof}
+
+    \begin{lemma}
+        В ориентированном графе сумма входящих степеней равна сумме исходящих степеней
+    \end{lemma}
+    \begin{proof}
+        \dots
+    \end{proof}
+
+    \begin{lemma}
+        Всякий конечный граф содержит чётное число вершин нечётной степени
+    \end{lemma}
+    \begin{proof}
+        \dots
+    \end{proof}
+
+
+    
+
 \end{document}

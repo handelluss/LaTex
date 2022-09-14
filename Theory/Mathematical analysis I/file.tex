@@ -9,7 +9,11 @@
 
 \begin{document}
     \maketitle
-    
+    \newpage
+
+    \tableofcontents
+    \newpage
+
     \section{Действительные числа}
     \subsection{Аксиоматика действительных чисел}
     \subsubsection*{Аксиомы сложения}
@@ -246,7 +250,7 @@
         \end{align*}
     \end{theorem}
 
-    \subsection{Аксиома полноты и верхняя (нижняя) грань числового множества}
+    \subsection{Верхняя (нижняя) грань числового множества}
 
     \begin{definition}
         Множество $X \subset \R$ {\itограничено сверхну (снизу)}, если
@@ -379,7 +383,131 @@
         {\itИррациональные числа} есть $\R \backslash \Q$
     \end{definition}
     \begin{theorem}
-        $\exists s \in \R : s^2 = 2 \land s \in \R$
+        $\sqrt{2} \notin \Q$
     \end{theorem}
-    
+    \begin{proof}
+        Пойдём от обратного.\\ Пусть $\sqrt{2} \in \Q \RA \exists \text{ несократимая дробь } \frac{m}{n},
+        \text{где } m \in \Z, n \in \N$.
+
+        Имеем: \[\frac{m}{n} = \sqrt{2} \RA m^2 = 2n^2 \RA 2 \mid m^2 \RA 2 \mid m \RA m = 2x\]
+        Но это также значит, что \[2n^2 = 4x^2 \RA n^2 = 2x^2 \RA 2 \mid n\]
+        То есть, дробь $\frac{m}{n}$ сократима на два - противоречие.
+    \end{proof}
+
+    \begin{definition}
+        {\it Модулем} числа $x \in \R$ называется
+        \[\abs{x} = 
+        \begin{cases}
+            x, x \geq 0 \\ -x, x < 0    
+        \end{cases}\]
+    \end{definition}
+    Свойства модуля:
+    \begin{enumerate}
+        \item $-\abs{x} \leq x \leq \abs{x}$
+        \item Пусть $a > 0$. Тогда $\abs{x} \leq a \LRA -a \leq x \leq a$
+        \item $\abs{x+y} \leq \abs{x} + \abs{y}$ - {\it Неравенство треугольника}
+    \end{enumerate}
+    \begin{proof}
+        Используя свойство 1, а затем свойство 2:
+        \begin{align*}
+            &\begin{cases}
+                -\abs{x} \leq x \leq \abs{x} \\
+                -\abs{y} \leq y \leq \abs{y}
+            \end{cases} \RA 
+            - (\abs{x} + \abs{y}) \leq x + y \leq \abs{x} + \abs{y}  \\
+            &\RA \abs{x+y} \leq \abs{x} + \abs{y}
+        \end{align*}
+    \end{proof}
+
+    \subsection{Аксиомы непрерывности или полноты}
+
+    {\it Аксиома Архимеда.} $\forall x \in \R \ \exists n \in \N : x \leq n$ 
+
+    {\it Аксиома индукции.} $\forall X \subset \N, X \neq \varnothing : \exists \min X$
+
+    \begin{definition}
+        Непустые $A, B \subset \R$ образуют {\it щель}, если $\forall a \in A, \forall b \in B : a \leq b$
+        Данная {\it щель} содержит $x \in \R$: $\forall a \in A, \forall b \in B: a \leq x \leq b$
+    \end{definition}
+
+    {\it Аксиома Кантора-Дедекинда.} Любая щель содержит хотя бы одно вещественное число.
+
+    \subsubsection*{Полезные следствия}
+    \begin{theorem}
+        Несуществование бесконечно малых величин.
+        \[x \in R \land \left(\forall n \in \N : x \leq \frac{1}{n}\right) \RA x \leq 0\]
+    \end{theorem}
+    \begin{proof}
+        Предположим обратное, тогда $x$ - положителен, значит:
+        \[\forall n \in \N : x \leq \frac{1}{n} \LRA n \leq \frac{1}{x}\]
+        что противоречит аксиоме Архимеда.
+    \end{proof}
+
+    \begin{theorem}
+        $\forall \text{ограниченных снизу } X \subset \Z : \exists \min X$
+    \end{theorem}
+    \begin{proof}
+        Пусть $i = \inf X$. По аксиоме Архимеда $\exists n \in \N : n \geq i$.
+        
+        Построим множество $X' = \{x + n + 1 \ \vert \ x \in X\}$. Очевидно, что
+        $X' \subset \N \RA $ по аксиоме индукции $x_0 = \min X'$. Значит,
+        $x_0 - (n+1) = \min X$, что и требовалось.
+    \end{proof}
+
+    \begin{theorem}
+        Пусть $I = \langle a;b \rangle, s > 0$. \[\exists r \in \Q : rs \in I\]
+    \end{theorem}
+    \begin{proof}
+        Пусть $\alpha = b - a$ - длина промежутка $I$. Согласно аксиоме архимеда 
+        \[\exists q \in \N : \frac{s}{\alpha} < q \LRA \frac{s}{q} < \alpha\] 
+        Теперь осталось найти $p \in \Z$, чтобы выполнялось $p\dfrac{s}{q} \in I$.
+
+        Пусть дано $E = \{m \in \Z \ \vert \ m \cdot \frac{s}{q} \geq b\}$. Из предыдущей
+        теоремы мы знаем, что $\exists m_0 = \min E$. 
+        
+        Очевидно, что $(m_0 - 1) \notin E \RA (m_0-1) \cdot \frac{s}{q} < b$. Докажем, что $(m_0 - 1) \cdot \frac{s}{q} > a$.
+        
+        \begin{align*}
+            \frac{s}{q} < \alpha \LRA a < b - \frac{s}{q} \leq m_0 \cdot \frac{s}{q} - \frac{s}{q} = (m_0 - 1) \frac{s}{q}
+        \end{align*}
+        Таким образом, $r = (m_0 - 1)\dfrac{s}{q}$
+    \end{proof}
+
+    \begin{theorem}
+        $\existu a \in R, a > 0 : a^2 = 2$
+    \end{theorem}
+    \begin{proof}
+        Пусть $A = \{x \in \R \ \vert \ x > 0 \land x^2 < 2\}$, $B = \{y \in \R \ \vert \ y > 0 \land y^2 > 2\}$.
+
+        $(A, B)$ - щель, если неверно: $\exists y \in B \ \exists x \in A : y \leq x \RA y^2 < x^2 \LRA 2 < y^2 \leq x^2 < 2$ .
+        Очевидно противоречие. Следовательно, $(A,B)$ - щель. Значит по аксиоме Кантора-Дедекинда
+        $\exists c \in \R \ \forall x \in A \ \forall y \in B: x \leq c \leq y$.
+
+        Докажем, что $c^2 = 2$. Пойдём от обратного, значит, что $c^2 < 2 \lor c^2 > 2$.
+
+        \begin{lemma}
+            В множестве $A$ нет наибольшего числа, а в $B$ нет наименьшего
+        \end{lemma}
+        \begin{proof}
+            \dots
+        \end{proof}
+        \begin{enumerate}
+            \item $c^2 < 2 \RA c \in A$, но согласно лемме $\exists d \in A : c < d$ - противоречие.
+            \item аналогично
+        \end{enumerate}
+    \end{proof}
+
+    \begin{theorem}
+        На любом невырожденном отрезке есть иррациональные точки
+    \end{theorem}
+
+    %хуита какая-то
+
+    \subsection{Грани}
+
+    \begin{definition}
+        Пусть $A$ - непустое ограниченное сверху множество. Пусть $B$ - мнлжество всех
+        верхних границ 
+    \end{definition}
+
 \end{document}
