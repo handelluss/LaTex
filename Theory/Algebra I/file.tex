@@ -180,7 +180,7 @@
         следующими свойствами:
         \begin{enumerate}
             \item Относительно сложения существует абелева группа.
-            \item Выполняется дистрибутивность: $\forall a, b, c \in K : a(b + c) = ab + ac$.
+            \item Выполняется дистрибутивность: $\forall a, b, c \in K : a(b + c) = ab + ac \land (b+c)a = ba + ca$.   
         \end{enumerate}
     \end{definition}
 
@@ -197,7 +197,9 @@
     \begin{definition}
         Кольцо $K$ называется {\it ассоциативным}, если выполнено $\forall a, b, c \in K : (ab)c = a(bc)$
     \end{definition}
-
+    \begin{definition}
+        Кольцо с единицей называется {\it  унитальным}.
+    \end{definition}
     Два важных замечания:
     \begin{enumerate}
         \item Если 1 = 0, то
@@ -229,6 +231,10 @@
     \end{definition}
 
     \begin{definition}
+        {\it Телом} называется унитальное ассоциативное кольцо, у которого $\forall x \in R\backslash{0} \ \exists x' : xx' = x'x = 1$    
+    \end{definition}
+
+    \begin{definition}
         {\it Полем} называется коммутативное ассоциативное кольцо с единицей,
         в котором каждый ненулевой элемент обратимым. 
 
@@ -243,5 +249,16 @@
 
     В кольце без делителей нуля имеет место:
     \[ac = bc \land c \neq 0 \RA a = b\]
+
+    \begin{definition}
+        Операция $\circ$ называется {\it самодистрибутивной (слева/справа)}, если
+        \[x \circ (y \circ z) = (x \circ y) \circ (x \circ z)\]
+        Например, конъюнкция и дизъюнкция являются {\it самодистрибутивными}
+    \end{definition}
     
+    
+
+    Цитата Великого: {\it "К некоммутативности привыкаешь за семестр, к неассоциативности - никогда"}.
+
+
 \end{document}
