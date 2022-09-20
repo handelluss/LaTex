@@ -1,6 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1663132705 "c:/LaTex/Theory/Discrete Maths/file.tex" "file.pdf" "file" 1663132707
-  "c:/LaTex/Theory/Discrete Maths/file.tex" 1663132701 21505 8c678caba513341537e65ae8a66bbf96 ""
+["pdflatex"] 1663655499 "c:/LaTex/Theory/Discrete Maths/file.tex" "file.pdf" "file" 1663655502
+  "Capture.PNG" 1663653880 13026 5b7ae5f67b2eb488d39678da05471eba ""
+  "Capture2.PNG" 1663654586 17530 087a48ac35be37280259caa85d3a290a ""
+  "c:/LaTex/Theory/Discrete Maths/file.tex" 1663655499 21883 d0b1490db244d4c7eb3d642050117710 ""
   "c:/LaTex/nul" 0 -1 0 ""
   "c:/LaTex/pream.tex" 1663049987 949 3ee9c2fb114550e7565e75d4648bbfce ""
   "c:/Users/handelluss/.texlive2022/texmf-var/fonts/tfm/lh/lh-t2a/labx1440.tfm" 1658839048 3304 6a543c07045572737981351171e0505e ""
@@ -178,8 +180,8 @@
   "c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1658836104 361512 82dfaf0f77de909661d2b8160dee23c6 ""
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1658836131 1573550 4d631f5ee361d2520ab231dc46d5144a ""
   "c:/texlive/2022/texmf.cnf" 1658836093 713 e69b156964470283e0530f5060668171 ""
-  "file.aux" 1663132706 461 ce6e16e87016071169831c8cf67ca232 "pdflatex"
-  "file.tex" 1663132701 21505 8c678caba513341537e65ae8a66bbf96 ""
+  "file.aux" 1663655502 461 ce6e16e87016071169831c8cf67ca232 "pdflatex"
+  "file.tex" 1663655499 21883 d0b1490db244d4c7eb3d642050117710 ""
   "nul" 0 -1 0 ""
   (generated)
   "file.aux"

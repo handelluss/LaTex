@@ -894,6 +894,16 @@ INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT c:/Users/handelluss/.texlive2022/texmf-var/fonts/tfm/lh/lh-t2a/larm1000.tfm
 INPUT c:/Users/handelluss/.texlive2022/texmf-var/fonts/tfm/lh/lh-t2a/larm0700.tfm
+INPUT ./Capture.PNG
+INPUT ./Capture.PNG
+INPUT Capture.PNG
+INPUT ./Capture.PNG
+INPUT ./Capture.PNG
+INPUT ./Capture2.PNG
+INPUT ./Capture2.PNG
+INPUT Capture2.PNG
+INPUT ./Capture2.PNG
+INPUT ./Capture2.PNG
 INPUT file.aux
 INPUT c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc
 INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb

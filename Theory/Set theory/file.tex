@@ -151,4 +151,91 @@
         Объединение конечного или счётного числа конечных или
         счётных множеств конечно или счётно.
     \end{theorem}
+
+    \section{Числовые структуры теории множеств}
+
+     \subsection*{Натуральные числа}
+
+    \begin{definition}
+        Определим $\N$ как мощности конечных множеств
+    \end{definition}
+
+    \begin{align}
+        &0 = \abs{\varnothing} \\
+        &1 = \abs{\{0\}} \\
+        &\abs{A} + \abs{B} = \abs{(\{0\} \times A) \cup (\{1\} \times B)} \\
+        &\abs{A} \cdot \abs{B} = \abs{A \times B}, 0 = \abs{\varnothing}, 1 = \abs{\{0\}} 
+    \end{align}
+
+    Свойства операций $+, \cdot$:
+    \begin{enumerate}
+        \item $+$ - ассоциативна и коммутативна \\
+        \item $\cdot$ - ассоциативна, коммутативна и дистрибутивна\\
+        \item $0, 1$ - нейтральны относительно сложения и умножение соответсвенно \\
+        \item $0 < 1 < 2 < ...$ и между соседями нет других натуральных чисел \\
+        \item $(P(0) \land \forall x : P(X) \RA P(x+1) \RA \forall P(x)$    
+    \end{enumerate}
+    
+
+    \subsection*{Целые числа}
+
+    \begin{definition}
+        Определим $\Z$ как 
+        \[(\N \times \N) / \sim , \text{ где } (a, b) \sim (c, d) \LRA a - b = c - d \LRA a + c = b + d\]
+    \end{definition}
+    Рассмотрим $[a, b] = \{(x,y) \ \vert \ (x, y) \sim (a, b)\}$
+
+    Некоторые свойства:
+    \begin{enumerate}
+        \item $[a, b] \tilde{+} [c, d] = [a + c, b + d]$
+        \item $[a, b] \tilde{\cdot} =  [ac + bd, ad + bc]$ 
+    \end{enumerate}
+
+    \subsection*{Рациональные числа}
+
+    \begin{definition}
+        Определим $\Q$ как
+        \[(\Z \times \N \backslash \{0\}) / \sim, \text{ где }(a,b) \sim (c,d) \LRA ad = bc\]
+    \end{definition}
+
+    Некоторые свойства:
+    \begin{enumerate}
+        \item $[a, b] \tilde{+} [c, d] = [ad + bc, bd]$
+        \item $[a, b] \tilde{\cdot} [c, d] = [ac, bd]$
+        \item $[a, b] \leq [c, d] \LRA ad \leq bc$
+        \item $\tilde{0} = [0, 1]; \tilde{1} = [1, 1]$
+    \end{enumerate}
+
+    \subsection*{Вещественные числа}
+
+    \begin{definition}
+        Последовательность рациональных есть отображение $f : \N \rightarrow \Q$
+    \end{definition}
+
+    \begin{definition}
+        Определим $\R$ как $\R = S / \sim$, где $S$ - множество всех последовательностей
+        Коши $\{q_i\}$ рациональных чисел.
+
+        Т.е. $\forall n \ \exists m \ \forall i, j > m : \abs{q_i - q_j} < 2^{-n}$, где \\ $\{q_i\} \sim \{r_i\} \LRA \lim_i (q_i - r_i) = 0$
+
+    \end{definition}
+
+    \subsection*{Комплексные числа}
+
+    \begin{definition}
+        Поле комплексных чисел есть наименьшеее расширение поля вещественных чисел, обладающие элементов $i$, таким, что $i^2 = -1$. \\
+        $\mathbb{C} = \R \times \R$
+    \end{definition}
+
+    Свойства:
+    \begin{enumerate}
+        \item $(x, y) \tilde{+} (z, w) = (x + z, y + w)$
+        \item $(x, y) \tilde{\cdot} (z, w) = (xz - yw, xw + yz)$
+    \end{enumerate}
+
+    \section{ZFC -- система Цермело-Френкеля}
+
+
+
+
 \end{document}
